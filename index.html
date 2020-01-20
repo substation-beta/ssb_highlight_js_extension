@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ssb.css">
+
+  <link rel="stylesheet"
+        href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/vendor/highlight.pack.js"></script>
+  <script src="js/vendor/ssb.highlight.js"></script>
+  <script>hljs.registerLanguage('ssb', window.hljsjavascript);</script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+<div>
+  <pre><code class="language-ssb">
+#INFO
+Title: My new project
+Author: Youka
+Version: 16.06.2012
+Description: First concept of a new render format.
+// Comment there
+
+#TARGET
+Width: 1280
+Height: 720
+// Comment here
+Depth: 1000
+View: perspective
+
+#MACROS
+Default: [bold=y]
+Mine: [bold=n;color=FF0000]
+// And another comment
+Another: [${Mine};position=100,200,-1;rotate-z=180]I'm${Mine} a:[position=100,200,-1]test2
+
+#EVENTS
+// 0-2.0|||This line is a comment over 2 seconds!
+2.0-5:0.0|Another|Hello, i'm a note!|red,    rotated\ntext over multiple lines.
+5:0.0-2:5:0.0|Mine|Draw sth.|[mode=shape;texture=RAMEN]m 0 0 l 50.5 0 50.5 20.125 0 20.125
+10:0.0-10:50:0.0||${Another}Lets scale some text to double its size!|[animate=[500, 1000, [scale=2]]This text is getting huge
+20.0.0-21.0.0|||[font=MaterialIcon]some_circle_ligature
+'show-something'|Default||This will only be shown when the event id is given
+
+#RESOURCES
+Texture: RAMEN,url,../ramen.tga
+// Will we support ligaturs? Pretty important for icon fonts
+Font: MaterialIcon,regular,data,AAEAAAAKAIAAAwAgT1MvMnwMf9s...
+  </code></pre>
+</div>
+</body>
+
+</html>
