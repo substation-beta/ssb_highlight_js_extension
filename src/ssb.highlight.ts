@@ -1,11 +1,4 @@
-/*
-Language: JavaScript
-Description: JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
-Category: common, scripting
-Website: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-*/
-
-var ATTRIBUTES = {
+const ATTRIBUTES = {
   begin: '(.*?):',
   end: '$',
   className: 'attribute',
@@ -23,13 +16,13 @@ var ATTRIBUTES = {
   ]
 };
 
-var MACRO_INSERT = {
+const MACRO_INSERT = {
   begin: '\\${',
   end: '}',
   className: 'macro-insert'
 };
 
-var EVENT_LINE = {
+const EVENT_LINE = {
   endsWithParent: true,
   className: 'event-line',
   contains: [{
@@ -44,12 +37,12 @@ var EVENT_LINE = {
   ]
 };
 
-var COMMENT_LINE = {
+const COMMENT_LINE = {
   begin: '//(.*)$',
   className: 'comment'
 };
 
-window.hljsjavascript = function(hljs) {
+export const SSBHlJS = function(hljs) {
   return {
     aliases: ['ssb'],
     contains: [
