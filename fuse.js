@@ -16,7 +16,7 @@ const fuse = FuseBox.init({
       }
     }),
   ],
-  output: "dist/$name.js",
+  output: "dist/$name.min.js",
 });
 
 fuse.bundle("ssb.highlight")
