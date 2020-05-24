@@ -22,10 +22,7 @@ const MACRO_INSERT = {
   className: 'ssb-macro-insert'
 };
 
-const EVENT_LINE = {
-  endsWithParent: true,
-  className: 'ssb-event-line',
-  contains: [{
+const EVENT_LINE_RULES = [{
     begin: '\\[',
     end: '\\]',
     className: 'ssb-event',
@@ -34,7 +31,12 @@ const EVENT_LINE = {
     ]
   },
     MACRO_INSERT
-  ]
+];
+
+const EVENT_LINE = {
+  endsWithParent: true,
+  className: 'ssb-event-line',
+  contains: EVENT_LINE_RULES
 };
 
 const COMMENT_LINE = {
@@ -206,5 +208,16 @@ export const SSBHlJS_RESOURCES_SECTION = function(hljs) {
   return {
     aliases: ['ssb-resources-section'],
     contains: RESOURCES_SECTION_RULES
+  };
+};
+
+export const SSBHlJS_EVENT = function(hljs) {
+  return {
+    aliases: ['ssb-event'],
+    contains: [{
+      className: 'ssb-event-line',
+      contains: EVENT_LINE_RULES,
+      endsWithParent: true
+    }]
   };
 };
