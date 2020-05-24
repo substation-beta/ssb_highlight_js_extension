@@ -1,36 +1,48 @@
-.hljs-section-title {
+.hljs-ssb-section {
   color: #349da2;
 }
 
-.hljs-attribute-name {
+.hljs-ssb-comment {
+  color: #c1c1c1;
+}
+
+.hljs-ssb-section-title {
+  font-weight: bold;
+}
+
+.hljs-ssb-section-title {
+  color: #349da2;
+}
+
+.hljs-ssb-attribute-name {
   color: #5ab3ae;
 }
 
-.hljs-attribute-value {
+.hljs-ssb-attribute-value {
   color: green;
 }
 
-.hljs-macro-name {
+.hljs-ssb-macro-name {
   color: #8c4248;
 }
 
-.hljs-event-line {
+.hljs-ssb-event-line {
   color: #8c7144;
 }
 
-.hljs-event {
+.hljs-ssb-event {
   color: #30608c;
 }
 
-.hljs-event-timestamp {
+.hljs-ssb-event-timestamp {
   color: #468b66;
 }
 
-.hljs-event-separator {
+.hljs-ssb-event-separator {
   color: black;
 }
 
-.hljs-event-macro,
-.hljs-macro-insert {
+.hljs-ssb-event-macro,
+.hljs-ssb-macro-insert {
   color: #5ab3ae;
 }
